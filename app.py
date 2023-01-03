@@ -5,8 +5,8 @@ import torch
 
 @st.cache(allow_output_mutation=True)
 def get_model():
-    tokenizer = BertTokenizer.from_pretrained('indolem/indobert-base-uncased')
-    model = BertForSequenceClassification.from_pretrained('indolem/indobert-base-uncased')
+    tokenizer = BertTokenizer.from_pretrained('blacklotusid/hsbert')
+    model = BertForSequenceClassification.from_pretrained('blacklotusid/hsbert')
     return tokenizer,model
 
 
