@@ -1,12 +1,12 @@
 import streamlit as st
 import numpy as np
-from transformers import BertTokenizer, BertForSequenceClassification, AutoTokenizer, AutoModelForSequenceClassification
+from transformers import BertTokenizer, BertForSequenceClassification
 import torch
 
 @st.cache(allow_output_mutation=True)
 def get_model():
-    tokenizer = AutoTokenizer.from_pretrained("indolem/indobert-base-uncased")
-    model = AutoModelForSequenceClassification.from_pretrained('blacklotusid/hsbert')
+    tokenizer = BertTokenizer.from_pretrained('indolem/indobert-base-uncased')
+    model = BertForSequenceClassification.from_pretrained("blacklotusid/hsbert")
     return tokenizer,model
 
 
@@ -17,8 +17,8 @@ button = st.button("Analyze")
 
 d = {
     
-  1:'HateSpeech',
-  0:'Non HateSpeech'
+  1:'Toxic',
+  0:'Non Toxic'
 }
 
 if user_input and button :
