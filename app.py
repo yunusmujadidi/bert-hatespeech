@@ -17,8 +17,8 @@ button = st.button("Analyze")
 
 d = {
     
-  1:'Toxic',
-  0:'Non Toxic'
+  1:'HateSpeech',
+  0:'Non HateSpeech'
 }
 
 if user_input and button :
