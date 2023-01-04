@@ -1,11 +1,11 @@
 import streamlit as st
 import numpy as np
-from transformers import BertTokenizer, BertForSequenceClassification
+from transformers import BertTokenizer, BertForSequenceClassification, AutoTokenizer
 import torch
 
 @st.cache(allow_output_mutation=True)
 def get_model():
-    tokenizer = BertTokenizer.from_pretrained('blacklotusid/hsbert')
+    tokenizer = AutoTokenizer.from_pretrained("indolem/indobert-base-uncased")
     model = BertForSequenceClassification.from_pretrained('blacklotusid/hsbert')
     return tokenizer,model
 
