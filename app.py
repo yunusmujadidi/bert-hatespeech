@@ -12,8 +12,8 @@ def get_model():
 
 tokenizer,model = get_model()
 
-user_input = st.text_area('Enter Text to Analyze')
-button = st.button("Analyze")
+user_input = st.text_area('Masukkan text yang ingin di prediksi')
+button = st.button("Prediksi")
 
 d = {
     
