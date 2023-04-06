@@ -29,6 +29,3 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-user_input = st.text_area('Masukkan text yang ingin di prediksi')
-button = st.button("Prediksi")
-
