@@ -1,3 +1,9 @@
 streamlit
 torch
 transformers
+scikit-learn
+imbalanced-learn
+numpy
+pandas
+matplotlib
+tensorflow
