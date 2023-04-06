@@ -1,23 +1,12 @@
 import streamlit as st
 import numpy as np
-from transformers import BertTokenizer, BertForSequenceClassification, AutoTokenizer
-import torch
-
-@st.cache(allow_output_mutation=True)
-def get_model():
-    tokenizer = AutoTokenizer.from_pretrained("indolem/indobert-base-uncased")
-    model = BertForSequenceClassification.from_pretrained('blacklotusid/hsbert')
-    return tokenizer,model
-
-
-tokenizer,model = get_model()
 
 np.random.seed(42)
 if "cm" not in st.session_state:
     st.session_state.cm = {}
 if "acc" not in st.session_state:
     st.session_state.acc = {}
-judul = "Optimasi Algoritma Backpropagation untuk Klasifikasi Customer Churn dengan BFPA dan ENN"
+judul = "DETEKSI HATE SPEECH BERBAHASA INDONESIA PADA MEDIA SOSIAL TWITTER MENGGUNAKAN BIDIRECTIONAL ENCODER REPRESENTATION FROM TRANSFORMERS (BERT)"
 st.set_page_config(
     initial_sidebar_state="expanded",
     page_title=judul,
@@ -36,7 +25,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.markdown(
-    "<h2 style='text-align: center'>Disusun oleh: Hatif Muhammad Fawwaz</h2>",
+    "<h2 style='text-align: center'>Disusun oleh: Ahmad Yunus Mujadidi</h2>",
     unsafe_allow_html=True,
 )
 
